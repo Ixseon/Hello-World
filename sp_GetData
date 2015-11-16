@@ -1,0 +1,8 @@
+USE [FinderJobs]
+GO
+ALERT PROCEDURE [dbo].[GetData]
+@UniqueID varchar(120)
+AS
+SELECT Users.FirstName, Users.LastName, Users.Email, Users.PhoneNumber
+FROM Users
+WHERE Users.UniqueID = @UniqueID
